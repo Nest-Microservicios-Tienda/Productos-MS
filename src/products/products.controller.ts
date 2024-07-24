@@ -49,7 +49,7 @@ export class ProductsController {
   }
 
   @MessagePattern({ cmd: 'validate_id' })
-  validateId(@Payload('id') ids: number[]) {
+  validateId(@Payload() ids: number[]) {
     return this.productsService.validateId(ids);
   }
 }
